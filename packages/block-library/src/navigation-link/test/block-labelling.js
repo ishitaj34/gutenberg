@@ -240,5 +240,15 @@ describe( 'Navigation Link Block Labelling', () => {
 
 			expect( result ).toBe( 'Add post' );
 		} );
+
+		it( 'should work with Navigation block universal default block (empty attributes)', () => {
+			const defaultBlockAttributes = {};
+
+			const result = __experimentalLabel( defaultBlockAttributes, {
+				context: 'appender',
+			} );
+
+			expect( result ).toBe( 'Add link' );
+		} );
 	} );
 } );
